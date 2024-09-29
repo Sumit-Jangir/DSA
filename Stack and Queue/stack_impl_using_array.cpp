@@ -7,51 +7,41 @@ int Stack[MAX];//global Stack
 int top =-1;
 
 
-void push(int value)
-{
+void push(int value){
     if(top>=MAX-1)
         cout<<"Stack overflow condition meets\n";
-    else
-    {
+    else{
         Stack[++top]=value;
         cout<<value<<" is pushed into the Stack\n";
     }
 }
 
-int pop()
-{
-    if(top<0)
-    {
+int pop(){
+    if(top<0){
         cout<<"Stack underflow\n";
         return -1;
     }
-    else
-    {
+    else{
         int popele=Stack[top--];
         return popele;
     }
 }
 
-int peek()
-{
-    if(top<0)
-    {
+int peek(){
+    if(top<0){
         cout<<"Stack is empty\n";
         return -1;
     }
-    else
-    {
+    else{
         return Stack[top];
     }
 }
 
-bool isEmpty()
-{
+bool isEmpty(){
     return (top<0);
 }
 
-void printstackele()
-{
+void printstackele(){
     int temp = top;
     if(top<0)
     {
@@ -65,8 +55,7 @@ void printstackele()
     }
 }
 
-int main()
-{
+int main(){
     push(100);
     push(200);
     push(300);
